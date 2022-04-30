@@ -12,8 +12,8 @@
  * \param no recibe parametros
  * \return Devuelve un 0
 */
+int main(){
 
-int int main(){
 
 
   return 0;
