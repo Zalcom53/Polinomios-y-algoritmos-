@@ -12,19 +12,39 @@
 
 using namespace std;
 
+//-------------------------------------------------------------------------------
+// BLOQUE PARA LA DECLARACION DE FUNCIONES
+
+//-------------------------------------------------------------------------------
+
 enum algoritmos{sum, add, mult};
 
-/** \fn void printMenu()
- * \brief Imprime el listado de algoritmos disponibles para su ejecucion
- * \param no recibe parametros
- * \return No retorna valores
+/** \fn double sum()
+ * \brief realiza la sumatoria de los valores almacenados en un vector
+ * \param un entero n: es la representacion de la longitud de un vector, el usuario debe determinar el tamaño de n
+ * \param un vector de tipo double, con valores generados automaticamente o manualmente por el usuario
+ * \return retorna la sumatoria de los elementos contenidos en el vector
 */
-void printMenu(){
+double sum(double [], int){
 
-  for (size_t i = 0; i < count; i++) {
-    /* code */
-  }
+double s = 0.0;
+
+cout << "Algoritmo Sum\n" << endl;
+
+for (int i = 0; i <= n; i++) {
+
+s += s + a[i];
+
+}// LLave de cierre en for
 
 
+return s;
 
-} // Llave de cierre en la funcion printMenu
+} // LLave de cierre en la funcion sum
+
+double rSum(double [], int){
+
+cout << "RSUM\n" << endl;
+n < 0 ? return 0 : rSum(a,n-1)+a[n];
+
+}// LLave de cierre en la funcion rSum
