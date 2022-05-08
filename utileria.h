@@ -17,7 +17,54 @@ using namespace std;
 
 //-------------------------------------------------------------------------------
 
-enum algoritmos{sum, add, mult};
+/** \fn  evaluaAlgoritmo1()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double evaluaAlgoritmo1(){
+
+  cout << "Algoritmo 1\n" << endl;
+
+
+}// Llave de cierre en evalua evaluaAlgoritmo1
+
+/** \fn  evaluaAlgoritmo2()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double evaluaAlgoritmo2(){
+
+  cout << "Algoritmo 2\n" << endl;
+
+} // Llave de cierre en evaluaAlgoritmo2
+
+/** \fn  evaluaAlgoritmo3()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double evaluaAlgoritmo3(){
+
+  cout << "Algoritmo 3\n" << endl;
+
+} // Llave de cierre en evaluaAlgoritmo3
+
+/** \fn  evaluaAlgoritmo4()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double evaluaAlgoritmo4(){
+
+  cout << "Algoritmo 4\n" << endl;
+
+} // Llave de cierre en evaluaAlgoritmo4
 
 /** \fn double sum()
  * \brief realiza la sumatoria de los valores almacenados en un vector
@@ -42,6 +89,12 @@ return s;
 
 } // LLave de cierre en la funcion sum
 
+/** \fn  rSum()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
 double rSum(double [], int){
 
 cout << "RSUM\n" << endl;
@@ -75,16 +128,149 @@ return c;
 
 } // Llave de cierre en la funcion add
 
+/** \fn  fibonacci()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double fibonacci(){
+
+  cout << "Fibonacci\n" << endl;
+
+
+
+}// Llave de cierre en la funcion fibonacci
+
+/** \fn  trasp()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double trasp(){
+
+  cout << "trasp\n" << endl;
+
+} // Llave de cierre en al funcion trasp
+
+/** \fn  mult()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double mult(){
+
+  cout << "mult\n" << endl;
+
+
+
+}// Llave de cierre en la funcion mult
+
+/** \fn  perm()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+double perm(){
+
+cout << "Perm\n" << endl;
+
+
+}// Llave de cierre en la funcion perm
+
+/** \fn  seqSearch()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+int seqSearch(){
+
+  cout << "SeqSearch\n" << endl;
+
+}// Llave de cierre en la funcion seqSearch
+
+/** \fn  binSearch()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+int binSearch(){
+
+  cout << "BinSearch\n" << endl;
+
+
+}// LLave de cierre en la funcion binSearch
+
+/** \fn  binSearch1()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+int binSearch1(){
+
+  cout << "binSearch1\n" << endl;
+
+}// Llave de cierre en la funcion binSearch1
+
+/** \fn  generaMatriz()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
 int generaMatriz(){
 
+int seleccionUsuario;
+cout << "Ingresar valores manualmente[1]" << endl;
+cout << "Generar valores de forma aleatoria[2]" << endl;
 
+seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
 
-
+(n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
 
 }
 
+
+/** \fn  matrizManual()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+void matrizManual(){
+
+  cout << "Ingrese los valores de la matriz\n" << endl;
+  for (size_t i = 0; i < count; i++) {
+    cin >> ;
+  }
+
+}
+
+/** \fn  matrizAleatoria()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+void matrizAleatoria(){
+
+  cout << "Generando matriz de forma aleatoria, espere un momento...\n" << endl;
+
+  for (size_t i = 0; i < count; i++) {
+    /* code */
+  }
+  cout << "Matriz generada con exito!\n" << endl;
+
+} // LLave de cierre en matriz aleatoria
+
 /** \fn  CapturaEntero()
- * \brief 
+ * \brief
  * \param
  * \param
  * \return
