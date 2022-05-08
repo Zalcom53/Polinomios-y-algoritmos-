@@ -1,7 +1,7 @@
 /*
   Nombre: main.cpp
   Autor: Daniel Antonio Quihuis Hernandez
-  Fecha: abril del 2022
+  Fecha: mayo del 2022
   Descripcion: Este archivo contiene la implementacion del archivo utileria.h
 */
 
