@@ -14,7 +14,20 @@ using namespace std;
 
 //-------------------------------------------------------------------------------
 // BLOQUE PARA LA DECLARACION DE FUNCIONES
-
+evaluaAlgoritmo1();
+evaluaAlgoritmo2();
+evaluaAlgoritmo3();
+evaluaAlgoritmo4();
+sum();
+rSum();
+add();
+fibonacci();
+trasp();
+mult();
+perm();
+seqSearch();
+binSearch();
+binSearch1();
 //-------------------------------------------------------------------------------
 
 /** \fn  evaluaAlgoritmo1()
@@ -47,6 +60,7 @@ S = c[0];
 
 return s;
 }// Llave de cierre en evalua evaluaAlgoritmo1
+//-------------------------------------------------------------------------------
 
 /** \fn  potencia()
  * \brief
@@ -66,7 +80,8 @@ float potencia(float, int) {
   }
 
   return 0;
-}
+} // Llave de cierre en la funcion potencia
+//-------------------------------------------------------------------------------
 
 /** \fn  evaluaAlgoritmo2()
  * \brief
@@ -91,7 +106,7 @@ double evaluaAlgoritmo2(int, float [], float){
   return s;
 
 } // Llave de cierre en evaluaAlgoritmo2
-
+//-------------------------------------------------------------------------------
 
 /** \fn  evaluaAlgoritmo3()
  * \brief
@@ -114,6 +129,7 @@ float evaluaAlgoritmo3(int, float, float []){
   return s;
 
 } // Llave de cierre en evaluaAlgoritmo3
+//-------------------------------------------------------------------------------
 
 /** \fn  evaluaAlgoritmo4()
  * \brief
@@ -136,6 +152,7 @@ float evaluaAlgoritmo4(int, float, float []){
   return s;
 
 } // Llave de cierre en evaluaAlgoritmo4
+//-------------------------------------------------------------------------------
 
 /** \fn double sum()
  * \brief realiza la sumatoria de los valores almacenados en un vector
@@ -159,6 +176,7 @@ s += a[i];
 return s;
 
 } // LLave de cierre en la funcion sum
+//-------------------------------------------------------------------------------
 
 /** \fn  rSum()
  * \brief
@@ -172,7 +190,7 @@ cout << "RSUM\n" << endl;
 (n <= 0) ? return 0.0 : return rSum(a,n-1)+a[n];
 
 }// LLave de cierre en la funcion rSum
-
+//-------------------------------------------------------------------------------
 
 /** \fn double add()
  * \brief realiza la suma de dos matrices a y b para almacenarlos en una matriz c
@@ -198,6 +216,7 @@ double add(double [], double [], double [], int, int){
 return c;
 
 } // Llave de cierre en la funcion add
+//-------------------------------------------------------------------------------
 
 /** \fn  fibonacci()
  * \brief Calcula la sucesion de Fibonacci
@@ -223,6 +242,7 @@ int fibonacci(int n, int fn){
 return fn;
 
 }// Llave de cierre en la funcion fibonacci
+//-------------------------------------------------------------------------------
 
 /** \fn  trasp()
  * \brief calcula la transpuesta de una matriz
@@ -251,6 +271,7 @@ void trasp(){
 
 
 } // Llave de cierre en al funcion trasp
+//-------------------------------------------------------------------------------
 
 /** \fn  mult()
  * \brief calcula la multiplicacion de una matriz cuadrada
@@ -280,6 +301,7 @@ void mult(int [], int [], int [], int){
   } // Llave de cierre en el for con el contador i
 
 }// Llave de cierre en la funcion mult
+//-------------------------------------------------------------------------------
 
 /** \fn  perm()
  * \brief
@@ -318,6 +340,7 @@ if(k==n){
   } // Llave de cierre en el else
 
 }// Llave de cierre en la funcion perm
+//-------------------------------------------------------------------------------
 
 /** \fn  seqSearch()
  * \brief
@@ -341,6 +364,7 @@ int seqSearch(int [], int, int){
   return i;
 
 }// Llave de cierre en la funcion seqSearch
+//-------------------------------------------------------------------------------
 
 /** \fn  binSearch()
  * \brief
@@ -363,6 +387,7 @@ int binSearch(int [], int , int){
   } // Llave de cierre en el while
 return 0;
 }// LLave de cierre en la funcion binSearch
+//-------------------------------------------------------------------------------
 
 /** \fn  binSearch1()
  * \brief
@@ -385,6 +410,7 @@ int binSearch1(){
 if(x == a[low]) return low;
 else return 0;
 }// Llave de cierre en la funcion binSearch1
+//-------------------------------------------------------------------------------
 
 /** \fn  generaMatriz()
  * \brief
@@ -399,6 +425,7 @@ seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
 //(n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
 
 } // Llave de cierre en generaMatriz
+//-------------------------------------------------------------------------------
 
 /** \fn  CapturaEntero()
  * \brief
@@ -412,7 +439,7 @@ int generaVector(int []) {
 
   return 0;
 } // Llave de cierre en genera vector
-
+//-------------------------------------------------------------------------------
 
 /** \fn  CapturaEntero()
  * \brief

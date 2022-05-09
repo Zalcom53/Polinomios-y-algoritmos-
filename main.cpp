@@ -5,7 +5,12 @@
   Descripcion: Este archivo contiene la implementacion del archivo utileria.h
 */
 
+#include <iostream>
+#include <cstdlib>
 #include "utileria.cpp"
+
+using namespace std;
+
 
 /** \fn int main()
  * \brief realiza la implementacion del archivo utileria.cpp
