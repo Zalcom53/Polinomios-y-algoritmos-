@@ -1,3 +1,0 @@
-/Users/antonioquihuis/Documents/GitHub/Polinomios-y-algoritmos-/cmake-build-debug/CMakeFiles/Polinomios_y_algoritmos_.dir
-/Users/antonioquihuis/Documents/GitHub/Polinomios-y-algoritmos-/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/antonioquihuis/Documents/GitHub/Polinomios-y-algoritmos-/cmake-build-debug/CMakeFiles/rebuild_cache.dir

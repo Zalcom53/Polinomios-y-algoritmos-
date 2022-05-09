@@ -183,15 +183,30 @@ void trasp(){
 
 /** \fn  mult()
  * \brief calcula la multiplicacion de una matriz cuadrada
- * \param 
- * \param
- * \return
+ * \param una matriz a de enteros con valores precargados de forma aleatoria
+ * \param una matriz b de enteros con valores precargados de forma aleatoria
+ * \param una matriz c de enteros con valores precargados con basura(valores que se generaron al crear la matriz)
+ * \return retorna una matriz c de enteros, los valores contenidos en la matriz c es el producto del calculo de multiplicar las matrices a y b
 */
-void mult(){
+void mult(int [], int [], int [], int){
 
   cout << "mult\n" << endl;
 
+  for (int i = 0; i < n; i++) {
 
+    for (int j = 0; j < n; j++) {
+
+        c[i][j] = 0;
+
+      for (int k = 0; k < n; k++) {
+
+        c[i][j] = c[i][j] + a[i][k] * b[k]][j];
+
+      } // Llave de cierre en el for para el contador k
+
+    }// Llave de cierre en el for para el contador j
+
+  } // Llave de cierre en el for con el contador i
 
 }// Llave de cierre en la funcion mult
 
@@ -201,7 +216,7 @@ void mult(){
  * \param
  * \return
 */
-double perm(){
+void perm(){
 
 cout << "Perm\n" << endl;
 
@@ -254,46 +269,11 @@ int binSearch1(){
 int generaMatriz(){
 
 int seleccionUsuario;
-cout << "Ingresar valores manualmente[1]" << endl;
-cout << "Generar valores de forma aleatoria[2]" << endl;
-
 seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
-
-(n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
+//(n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
 
 } // Llave de cierre en generaMatriz
 
-/** \fn  matrizManual()
- * \brief
- * \param
- * \param
- * \return
-*/
-void matrizManual(){
-
-  cout << "Ingrese los valores de la matriz\n" << endl;
-  for (size_t i = 0; i < count; i++) {
-    cin >> ;
-  }
-
-}
-
-/** \fn  matrizAleatoria()
- * \brief
- * \param
- * \param
- * \return
-*/
-void matrizAleatoria(){
-
-  cout << "Generando matriz de forma aleatoria, espere un momento...\n" << endl;
-
-  for (size_t i = 0; i < count; i++) {
-    /* code */
-  }
-  cout << "Matriz generada con exito!\n" << endl;
-
-} // LLave de cierre en matriz aleatoria
 
 /** \fn  CapturaEntero()
  * \brief
