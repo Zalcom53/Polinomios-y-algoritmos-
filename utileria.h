@@ -304,12 +304,13 @@ void mult(int [], int [], int [], int){
 //-------------------------------------------------------------------------------
 
 /** \fn  perm()
- * \brief
- * \param
- * \param
- * \return
+ * \brief realiza la permutacion de una matriz
+ * \param una matriz de tipo flotante
+ * \param un entero
+ * \param un entero
+ * \return no retorna valores
 */
-void perm(float [], int, inti){
+void perm(float [], int, int){
 
 cout << "Perm\n" << endl;
 
@@ -343,10 +344,11 @@ if(k==n){
 //-------------------------------------------------------------------------------
 
 /** \fn  seqSearch()
- * \brief
- * \param
- * \param
- * \return
+ * \brief realiza la busqueda secuencial en un vector
+ * \param una matriz de enteros
+ * \param un entero como tope
+ * \param un entero
+ * \return retorna el valor si es que fue encontrado
 */
 int seqSearch(int [], int, int){
 
@@ -367,10 +369,11 @@ int seqSearch(int [], int, int){
 //-------------------------------------------------------------------------------
 
 /** \fn  binSearch()
- * \brief
- * \param
- * \param
- * \return
+ * \brief realiza la busqueda binaria de un vecot
+ * \param una matriz de enteros
+ * \param un entero como tope
+ * \param un entero
+ * \return regresa un 0
 */
 int binSearch(int [], int , int){
 
@@ -390,10 +393,11 @@ return 0;
 //-------------------------------------------------------------------------------
 
 /** \fn  binSearch1()
- * \brief
- * \param
- * \param
- * \return
+ * \brief realiza la busqueda bianria
+ * \param un vector de tipo entero
+ * \param un entero como tope
+ * \param un entero
+ * \return regresa un 0
 */
 int binSearch1(){
 
@@ -413,10 +417,10 @@ else return 0;
 //-------------------------------------------------------------------------------
 
 /** \fn  generaMatriz()
- * \brief
- * \param
- * \param
- * \return
+ * \brief genera una matriz segun su tipo
+ * \param recibe una matriz
+ * \param recibe un entero como tope de la matriz
+ * \return retorna una matriz generada de forma aleatoria
 */
 int generaMatriz(){
 
@@ -427,11 +431,11 @@ seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
 } // Llave de cierre en generaMatriz
 //-------------------------------------------------------------------------------
 
-/** \fn  CapturaEntero()
- * \brief
- * \param
- * \param
- * \return
+/** \fn  generaVector()
+ * \brief genera un vector
+ * \param recibe un vector de tipo entero
+ * \param un entero como longitud del vector
+ * \return retorna un vector generado de forma aleatoria
 */
 int generaVector(int []) {
 
@@ -442,10 +446,9 @@ int generaVector(int []) {
 //-------------------------------------------------------------------------------
 
 /** \fn  CapturaEntero()
- * \brief
- * \param
- * \param
- * \return
+ * \brief realiza la captura de un entero de forma segura(se asegura que el dato capturado sea un numero entero y no una letra u otro caracter no permitido)
+ * \param una cadena de caracteres
+ * \return retorna un entero como un valor aceptado 
 */
 int CapturaEntero(const char solicitud[]){
 
