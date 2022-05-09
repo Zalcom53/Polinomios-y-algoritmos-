@@ -459,6 +459,13 @@ else return 0;
 */
 int generaMatriz(int a[][], int n){
 
+  srand(time(0));
+  for (int i = 0; i <) n; i++) {
+    for (int j = 0; i <= n; j++) {
+        a[i][j] = rand()%n;
+    }
+  }// Llave de cierre en el for con el contador i
+
 //(n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
 
 } // Llave de cierre en generaMatriz
