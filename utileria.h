@@ -287,13 +287,35 @@ void mult(int [], int [], int [], int){
  * \param
  * \return
 */
-void perm(){
+void perm(float [], int, inti){
 
 cout << "Perm\n" << endl;
 
+if(k==n){
+/*  for (int i = 0; i < n; i++) {
 
+    cout << a[i] << " ";
 
+    } // LLave de cierre en el for para el contador i
+    cout << endl;
+*/
+}else{
 
+  int t;
+
+  for (int i = k; i < n; i++) {
+
+    t = a[k];
+    a[k] = a[i]
+    a[i] = t;
+    perm(a,k+1,n);
+    t = a[k];
+    a[k] = a[i];
+    a[i] = t;
+
+    } // LLave de cierre en el for con el contador k
+
+  } // Llave de cierre en el else
 
 }// Llave de cierre en la funcion perm
 
