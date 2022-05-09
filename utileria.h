@@ -14,20 +14,24 @@ using namespace std;
 
 //-------------------------------------------------------------------------------
 // BLOQUE PARA LA DECLARACION DE FUNCIONES
-evaluaAlgoritmo1();
-evaluaAlgoritmo2();
-evaluaAlgoritmo3();
-evaluaAlgoritmo4();
-sum();
-rSum();
-add();
-fibonacci();
-trasp();
-mult();
-perm();
-seqSearch();
-binSearch();
-binSearch1();
+float evaluaAlgoritmo1(int n, float c[], float x);
+float potencia(float, int);
+float evaluaAlgoritmo2(int, float [], float);
+float evaluaAlgoritmo3(int, float, float);
+float evaluaAlgoritmo4(int, float, float []);
+int sum(double [], int);
+int rSum(int [], int);
+float add(float [], float [], float [], int, int);
+int fibonacci(int n);
+void trasp(float [], int);
+void mult(int [], int [], int [], int);
+void perm(float [], int, int);
+int seqSearch(int [], int, int);
+int binSearch(int [], int , int);
+int binSearch1(int [], int, int);
+int generaMatriz(int []);
+int generaVector(int []);
+int CapturaEntero(const char solicitud[]);
 //-------------------------------------------------------------------------------
 
 /** \fn  evaluaAlgoritmo1()
@@ -36,13 +40,13 @@ binSearch1();
  * \param
  * \return
 */
-float evaluaAlgoritmo1(int , float, float[]){
+float evaluaAlgoritmo1(int n, float c[], float x){
 
 cout << "Algoritmo 1\n" << endl;
 
 float xn, s;
 
-S = c[0];
+s = c[0];
 
   for (int i = 0; i < n; i++) {
 
@@ -68,7 +72,7 @@ return s;
  * \param
  * \return
 */
-float potencia(float, int) {
+float potencia(float x, int j){
 
   if (j==0) {
     return 1.0;
@@ -89,7 +93,7 @@ float potencia(float, int) {
  * \param
  * \return
 */
-double evaluaAlgoritmo2(int, float [], float){
+float evaluaAlgoritmo2(int n, float c[], float x){
 
   cout << "Algoritmo 2\n" << endl;
 
@@ -114,12 +118,12 @@ double evaluaAlgoritmo2(int, float [], float){
  * \param
  * \return
 */
-float evaluaAlgoritmo3(int, float, float []){
+float evaluaAlgoritmo3(int n, float c[], float x){
 
   cout << "Algoritmo 3\n" << endl;
   float xn = 1.0, s = c[0];
 
-  for (size_t i = 0; i < count; i++) {
+  for (int i = 1; i < n; i++) {
 
     xn = xn * x;
     s = s + c[i] * xn;
@@ -137,7 +141,7 @@ float evaluaAlgoritmo3(int, float, float []){
  * \param
  * \return
 */
-float evaluaAlgoritmo4(int, float, float []){
+float evaluaAlgoritmo4(int n, float c[], float x){
 
   cout << "Algoritmo 4\n" << endl;
 
@@ -160,7 +164,7 @@ float evaluaAlgoritmo4(int, float, float []){
  * \param un vector de tipo double, con valores generados automaticamente o manualmente por el usuario
  * \return retorna la sumatoria de los elementos contenidos en el vector
 */
-int sum(double [], int){
+int sum(int a[], int n){
 
 double s = 0.0;
 
@@ -180,14 +184,14 @@ return s;
 
 /** \fn  rSum()
  * \brief
- * \param
- * \param
+ * \param un vector de enteros
+ * \param un entro como tope del vector
  * \return
 */
-int rSum(double [], int){
+int rSum(int a[], int n){
 
-cout << "RSUM\n" << endl;
-(n <= 0) ? return 0.0 : return rSum(a,n-1)+a[n];
+  if(n <= 0) return 0.0;
+  else return rSum(a,n-1) + a[n];
 
 }// LLave de cierre en la funcion rSum
 //-------------------------------------------------------------------------------
@@ -201,11 +205,11 @@ cout << "RSUM\n" << endl;
  * \param entero n numero de columnas
  * \return retorna una matric c con los valores sumados de las matrices a y b
 */
-double add(double [], double [], double [], int, int){
+float add(float a[], float b[], float c[], int m, int n){
 
   cout << "Add\n" << endl;
 
-  for (int i = 0; <= m; m++) {
+  for (int i = 0; i <= m; m++) {
     for (int j = 0; j <= n; j++) {
 
       c[i,j] = a[i,j] + b[i,j];
@@ -224,14 +228,14 @@ return c;
  * \param un entero que contendra el calculo de la sucesion
  * \return un entero fn el cual es el valor calculado de al sucesion de Fibonacci
 */
-int fibonacci(int n, int fn){
+int fibonacci(int n){
 
   cout << "Fibonacci\n" << endl;
 
   if(n <= 1) return n;
 
   int fnm2 = 0, fnm1 = 1,fn;
-  for(int i = 2; i < n; i++)
+  for(int i = 2; i < n; i++){
 
   fn = fnm1 + fnm2;
   fnm2 = fnm1;
@@ -250,7 +254,7 @@ return fn;
  * \param un entero n como tope de la matriz
  * \return no retorna valores
 */
-void trasp(){
+void trasp(float a[], int n){
 
   cout << "trasp\n" << endl;
 
@@ -261,9 +265,9 @@ void trasp(){
 
       aux = a[i][j];
 
-      A[i][j] = A[j][i];
+      a[i][j] = a[j][i];
 
-      A[j][i] = aux;
+      a[j][i] = aux;
 
     } // Llave de cierre para el for con el contador j
 
@@ -280,7 +284,7 @@ void trasp(){
  * \param una matriz c de enteros con valores precargados con basura(valores que se generaron al crear la matriz)
  * \return retorna una matriz c de enteros, los valores contenidos en la matriz c es el producto del calculo de multiplicar las matrices a y b
 */
-void mult(int [], int [], int [], int){
+void mult(int a[], int b[], int c[], int n){
 
   cout << "mult\n" << endl;
 
@@ -310,7 +314,7 @@ void mult(int [], int [], int [], int){
  * \param un entero
  * \return no retorna valores
 */
-void perm(float [], int, int){
+void perm(float a[], int k, int n){
 
 cout << "Perm\n" << endl;
 
@@ -329,7 +333,7 @@ if(k==n){
   for (int i = k; i < n; i++) {
 
     t = a[k];
-    a[k] = a[i]
+    a[k] = a[i];
     a[i] = t;
     perm(a,k+1,n);
     t = a[k];
@@ -350,7 +354,7 @@ if(k==n){
  * \param un entero
  * \return retorna el valor si es que fue encontrado
 */
-int seqSearch(int [], int, int){
+int seqSearch(int a[], int x, int n){
 
   cout << "SeqSearch\n" << endl;
 
@@ -375,7 +379,7 @@ int seqSearch(int [], int, int){
  * \param un entero
  * \return regresa un 0
 */
-int binSearch(int [], int , int){
+int binSearch(int a[], int x, int n){
 
   cout << "BinSearch\n" << endl;
 
@@ -399,7 +403,7 @@ return 0;
  * \param un entero
  * \return regresa un 0
 */
-int binSearch1(){
+int binSearch1(int a[], int n, int x){
 
   cout << "binSearch1\n" << endl;
 
@@ -422,7 +426,7 @@ else return 0;
  * \param recibe un entero como tope de la matriz
  * \return retorna una matriz generada de forma aleatoria
 */
-int generaMatriz(){
+int generaMatriz(int []){
 
 int seleccionUsuario;
 seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
@@ -448,7 +452,7 @@ int generaVector(int []) {
 /** \fn  CapturaEntero()
  * \brief realiza la captura de un entero de forma segura(se asegura que el dato capturado sea un numero entero y no una letra u otro caracter no permitido)
  * \param una cadena de caracteres
- * \return retorna un entero como un valor aceptado 
+ * \return retorna un entero como un valor aceptado
 */
 int CapturaEntero(const char solicitud[]){
 
