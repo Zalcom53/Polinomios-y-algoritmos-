@@ -23,12 +23,50 @@ using namespace std;
  * \param
  * \return
 */
-double evaluaAlgoritmo1(){
+float evaluaAlgoritmo1(int , float, float[]){
 
-  cout << "Algoritmo 1\n" << endl;
+cout << "Algoritmo 1\n" << endl;
 
+float xn, s;
 
+S = c[0];
+
+  for (int i = 0; i < n; i++) {
+
+    xn = x;
+
+    for (int j = 0; j < n; j++) {
+
+      xn += xn*x;
+
+    } // Llave de cierre en el for para el contador j
+
+    s =+ s + (c[i] * xn);
+
+} //Llave de cierre en el for para el contador i
+
+return s;
 }// Llave de cierre en evalua evaluaAlgoritmo1
+
+/** \fn  potencia()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+float potencia(float, int) {
+
+  if (j==0) {
+    return 1.0;
+  }else if(j%2==1){
+    return x*potencia(x,j-1);
+  }else{
+    float t = potencia(x,j/2);
+    return t*t;
+  }
+
+  return 0;
+}
 
 /** \fn  evaluaAlgoritmo2()
  * \brief
@@ -36,11 +74,24 @@ double evaluaAlgoritmo1(){
  * \param
  * \return
 */
-double evaluaAlgoritmo2(){
+double evaluaAlgoritmo2(int, float [], float){
 
   cout << "Algoritmo 2\n" << endl;
 
+  float s;
+
+  s = c[0];
+
+  for(int i = 1; i < n; i++) {
+
+    s+= s + (c[i]*potencia(x,i));
+
+  } // Llave de cierre en el for para el contador i
+
+  return s;
+
 } // Llave de cierre en evaluaAlgoritmo2
+
 
 /** \fn  evaluaAlgoritmo3()
  * \brief
@@ -48,9 +99,19 @@ double evaluaAlgoritmo2(){
  * \param
  * \return
 */
-double evaluaAlgoritmo3(){
+float evaluaAlgoritmo3(int, float, float []){
 
   cout << "Algoritmo 3\n" << endl;
+  float xn = 1.0, s = c[0];
+
+  for (size_t i = 0; i < count; i++) {
+
+    xn = xn * x;
+    s = s + c[i] * xn;
+
+  }// Llave de cierre en el for para el contador i
+
+  return s;
 
 } // Llave de cierre en evaluaAlgoritmo3
 
@@ -60,9 +121,19 @@ double evaluaAlgoritmo3(){
  * \param
  * \return
 */
-double evaluaAlgoritmo4(){
+float evaluaAlgoritmo4(int, float, float []){
 
   cout << "Algoritmo 4\n" << endl;
+
+  float s = 0.0;
+
+  for (int i = n-1; i >= 0; i--) {
+
+    s = s*x + c[i];
+
+  } // LLave de cierre en el for para el contador i
+
+  return s;
 
 } // Llave de cierre en evaluaAlgoritmo4
 
@@ -72,7 +143,7 @@ double evaluaAlgoritmo4(){
  * \param un vector de tipo double, con valores generados automaticamente o manualmente por el usuario
  * \return retorna la sumatoria de los elementos contenidos en el vector
 */
-double sum(double [], int){
+int sum(double [], int){
 
 double s = 0.0;
 
@@ -95,7 +166,7 @@ return s;
  * \param
  * \return
 */
-double rSum(double [], int){
+int rSum(double [], int){
 
 cout << "RSUM\n" << endl;
 (n <= 0) ? return 0.0 : return rSum(a,n-1)+a[n];
@@ -221,6 +292,7 @@ void perm(){
 cout << "Perm\n" << endl;
 
 
+
 }// Llave de cierre en la funcion perm
 
 /** \fn  seqSearch()
@@ -229,9 +301,20 @@ cout << "Perm\n" << endl;
  * \param
  * \return
 */
-int seqSearch(){
+int seqSearch(int [], int, int){
 
   cout << "SeqSearch\n" << endl;
+
+  int i = n;
+  a[0] = x;
+
+  while (a[i] != x){
+
+    i = i-1;
+
+  } // Llave de cierre en el while
+
+  return i;
 
 }// Llave de cierre en la funcion seqSearch
 
@@ -241,9 +324,12 @@ int seqSearch(){
  * \param
  * \return
 */
-int binSearch(){
+int binSearch(int [], int , int){
 
   cout << "BinSearch\n" << endl;
+
+  
+
 
 
 }// LLave de cierre en la funcion binSearch
