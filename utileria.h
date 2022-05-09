@@ -80,7 +80,7 @@ cout << "Algoritmo Sum\n" << endl;
 
 for (int i = 0; i <= n; i++) {
 
-s += s + a[i];
+s += a[i];
 
 }// LLave de cierre en for
 
@@ -98,7 +98,7 @@ return s;
 double rSum(double [], int){
 
 cout << "RSUM\n" << endl;
-(n < 0) ? return 0 : return rSum(a,n-1)+a[n];
+(n <= 0) ? return 0.0 : return rSum(a,n-1)+a[n];
 
 }// LLave de cierre en la funcion rSum
 
@@ -129,38 +129,65 @@ return c;
 } // Llave de cierre en la funcion add
 
 /** \fn  fibonacci()
- * \brief
- * \param
- * \param
- * \return
+ * \brief Calcula la sucesion de Fibonacci
+ * \param un entero n que es el tope de la sucesion
+ * \param un entero que contendra el calculo de la sucesion
+ * \return un entero fn el cual es el valor calculado de al sucesion de Fibonacci
 */
-double fibonacci(){
+int fibonacci(int n, int fn){
 
   cout << "Fibonacci\n" << endl;
 
+  if(n <= 1) return n;
 
+  int fnm2 = 0, fnm1 = 1,fn;
+  for(int i = 2; i < n; i++)
+
+  fn = fnm1 + fnm2;
+  fnm2 = fnm1;
+  fnm1 = fn;
+
+  } // Llave de cierre en for
+
+return fn;
 
 }// Llave de cierre en la funcion fibonacci
 
 /** \fn  trasp()
- * \brief
- * \param
- * \param
- * \return
+ * \brief calcula la transpuesta de una matriz
+ * \param una matriz de enteros
+ * \param un entero n como tope de la matriz
+ * \return no retorna valores
 */
-double trasp(){
+void trasp(){
 
   cout << "trasp\n" << endl;
+
+  float aux;
+  for(int i = 0; i <n-1; i++){
+
+    for (int j = i+1; j < n; j++) {
+
+      aux = a[i][j];
+
+      A[i][j] = A[j][i];
+
+      A[j][i] = aux;
+
+    } // Llave de cierre para el for con el contador j
+
+  } // LLave de cierre en el for para el contador i
+
 
 } // Llave de cierre en al funcion trasp
 
 /** \fn  mult()
- * \brief
- * \param
+ * \brief calcula la multiplicacion de una matriz cuadrada
+ * \param 
  * \param
  * \return
 */
-double mult(){
+void mult(){
 
   cout << "mult\n" << endl;
 
@@ -234,8 +261,7 @@ seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
 
 (n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
 
-}
-
+} // Llave de cierre en generaMatriz
 
 /** \fn  matrizManual()
  * \brief
