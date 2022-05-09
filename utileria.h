@@ -293,6 +293,8 @@ cout << "Perm\n" << endl;
 
 
 
+
+
 }// Llave de cierre en la funcion perm
 
 /** \fn  seqSearch()
@@ -328,10 +330,16 @@ int binSearch(int [], int , int){
 
   cout << "BinSearch\n" << endl;
 
-  
+  int low = 1, high = n, mid;
+  while (low <= high) {
 
+    mid = (low + high)/2;
+    if(x < a[mid]) high = mid -1;
+    else if(x > a[mid]) low = mid + 1;
+    else return mid;
 
-
+  } // Llave de cierre en el while
+return 0;
 }// LLave de cierre en la funcion binSearch
 
 /** \fn  binSearch1()
@@ -344,6 +352,16 @@ int binSearch1(){
 
   cout << "binSearch1\n" << endl;
 
+  int low = 1, high = n + 1, mid;
+  while(low < (high - 1)){
+
+    mid = ((low + high) /2);
+    if (x < a[mid]) high = mid;
+    else low = mid;
+
+  } // Llave de cierre en el while
+if(x == a[low]) return low;
+else return 0;
 }// Llave de cierre en la funcion binSearch1
 
 /** \fn  generaMatriz()
@@ -359,6 +377,19 @@ seleccionUsuario = CapturaEntero("Seleccione una opcion valida: ");
 //(n == 1)? matrizManual(int [], int):matrizAleatoria(int [], int);
 
 } // Llave de cierre en generaMatriz
+
+/** \fn  CapturaEntero()
+ * \brief
+ * \param
+ * \param
+ * \return
+*/
+int generaVector(int []) {
+
+
+
+  return 0;
+} // Llave de cierre en genera vector
 
 
 /** \fn  CapturaEntero()
