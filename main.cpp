@@ -351,9 +351,7 @@ cout << "Perm\n" << endl;
 
 if(k==n){
 /*  for (int i = 0; i < n; i++) {
-
     cout << a[i] << " ";
-
     } // LLave de cierre en el for para el contador i
     cout << endl;
 */
