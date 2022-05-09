@@ -15,20 +15,20 @@ using namespace std;
 //-------------------------------------------------------------------------------
 // BLOQUE PARA LA DECLARACION DE FUNCIONES
 float evaluaAlgoritmo1(int n, float c[], float x);
-float potencia(float, int);
-float evaluaAlgoritmo2(int, float [], float);
-float evaluaAlgoritmo3(int, float, float);
-float evaluaAlgoritmo4(int, float, float []);
-int sum(double [], int);
-int rSum(int [], int);
-float add(float [], float [], float [], int, int);
+float potencia(float x, int j);
+float evaluaAlgoritmo2(int n, float c[], float x);
+float evaluaAlgoritmo3(int n, float c[], float x);
+float evaluaAlgoritmo4(int n, float c[], float x);
+int sum(int a[], int n);
+int rSum(int a[], int n);
+float add(float a[], float b[], float c[], int m, int n);
 int fibonacci(int n);
-void trasp(float [], int);
-void mult(int [], int [], int [], int);
-void perm(float [], int, int);
-int seqSearch(int [], int, int);
-int binSearch(int [], int , int);
-int binSearch1(int [], int, int);
+void trasp(float a[][], int n);
+void mult(int a[], int b[], int c[], int n);
+void perm(float a[], int k, int n);
+int seqSearch(int a[], int x, int n);
+int binSearch(int a[], int x, int n);
+int binSearch1(int a[], int n, int x);
 int generaMatriz(int []);
 int generaVector(int []);
 int CapturaEntero(const char solicitud[]);
@@ -254,7 +254,7 @@ return fn;
  * \param un entero n como tope de la matriz
  * \return no retorna valores
 */
-void trasp(float a[], int n){
+void trasp(float a[][], int n){
 
   cout << "trasp\n" << endl;
 
@@ -284,7 +284,7 @@ void trasp(float a[], int n){
  * \param una matriz c de enteros con valores precargados con basura(valores que se generaron al crear la matriz)
  * \return retorna una matriz c de enteros, los valores contenidos en la matriz c es el producto del calculo de multiplicar las matrices a y b
 */
-void mult(int a[], int b[], int c[], int n){
+void mult(int a[][], int b[][], int c[][], int n){
 
   cout << "mult\n" << endl;
 
